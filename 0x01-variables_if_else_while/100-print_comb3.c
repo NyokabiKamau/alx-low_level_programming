@@ -10,29 +10,27 @@ int main(void)
 	int i = '0';
 	int a = '0';
 
-	while (i <= '9')
+	while (i <= '8')
 	{
 		while (a <= '9')
 		{
-			putchar(i);
-			putchar(a);
+			if (i < a)
+			{
+				putchar(i);
+				putchar(a);
 
-			if (a == '9' && i == '9')
-			{
-				putchar('\n');
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
+				if (!(a == '8' && i == '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			a++;
 		}
-		if (a >= '9')
-		{
-			a = '0';
-		}
+		a = '0';
 		i++;
 	}
+	putchar('\n');
+
 	return (0);
 }
