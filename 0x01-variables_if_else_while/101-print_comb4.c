@@ -3,39 +3,33 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (sucess)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int i = '0';
-	int a = '0';
-	int b = '0';
+	int a, b, c;
 
-	while (i <= '7')
+	for (a = '0'; a <= '7'; a++)
 	{
-		while (a <= '8')
+		for (b = '0'; b <= '8'; b++)
 		{
-			while (b <= '9')
+			for (c = '0'; c <= '9'; c++)
 			{
-				if (i < a && a < b)
+				if (a < b && b < c)
 				{
-					putchar(i);
 					putchar(a);
 					putchar(b);
-					if (!(i == '7' && a == '8' && b == '9'))
+					putchar(c);
+					if (!(a == '7' && b == '8' && c == '9'))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				b++;
 			}
-			b = '0';
-			a++;
 		}
-		a = 'o';
-		i++;
 	}
 	putchar('\n');
 	return (0);
 }
+
