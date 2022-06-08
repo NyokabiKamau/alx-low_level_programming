@@ -39,9 +39,9 @@ int main(void)
 			printf("%lu%lu", k, p);
 		else
 			printf("%lu0%lu", k, p);
-		if (count != 98)
+		if (ch != 98)
 			printf(", ");
-		count++;
+		ch++;
 	}
 	putchar('\n');
 	return (0);
