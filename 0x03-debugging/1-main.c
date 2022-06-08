@@ -12,8 +12,8 @@ int main(void)
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
-
-	while (i < 10) /* updating value of i is missing */
+	/* updating value of i missing */
+	while (i < 10)
 	{
 		putchar(i);
 	}
