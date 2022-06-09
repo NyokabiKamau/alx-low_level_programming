@@ -1,0 +1,12 @@
+#imclude "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	print most numbers();
+	return (0);
+}
