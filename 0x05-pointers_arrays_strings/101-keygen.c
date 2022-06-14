@@ -8,15 +8,15 @@
 */
 int main(void)
 {
-	int pswd, sum;
+	int pass, sum;
 
 	srand(time(NULL));
 	sum = 0;
 	while (sum <= 2645)
 	{
-		pswd = (rand() % 128);
-		sum += pswd;
-		printf("%c", pswd);
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
 	}
 	printf("%c", 2772 - sum);
 	
