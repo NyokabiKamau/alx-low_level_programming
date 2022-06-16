@@ -4,6 +4,7 @@
  * *_strncat - function that concatenates two strings
  * @dest: destination of the string
  * @src: string to be appended
+ * @n: number of bytes to print from src
  *
  * Return: dest
  */
@@ -12,12 +13,16 @@ char *_strncat(char *dest, char *src, int n)
 	int i, j;
 
 	i = 0;
-	for(j = 0; dest[j] != '\0'; j++);
+	j = 0;
 
-	while (src[i] != '\0' && i < n)
+	while (dest[i] != '\0')
 	{
-		dest[j + i] = src[i];
 		i++;
+	}
+	while (src[j] != '\0' && j < n)
+	{
+		dest[i + j] = src[j];
+		j++;
 	}
 	return (dest);
 }
