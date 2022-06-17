@@ -25,14 +25,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			n = 0;
 		r[j] = (n1[i] - '0') + (n2[i] - '0') + n;
-		r[j] = r[j] % 10 + '0';
+		r[j] = ((r[j] % 10) + '0');
 		i++;
 		j++;
 		if (n1[i] == '\0' || n2[i] == '\0')
 			r[j] = '\0';
 	}
-	if (n == size_r)
-		return (0);
 	r[j] = '\0';
 	return (r);
 }
