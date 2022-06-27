@@ -27,6 +27,7 @@ char *str_concat(char *s1, char *s2)
 		while (*a++)
 			str1++;
 	}
+	str2 = 0;
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -45,13 +46,10 @@ char *str_concat(char *s1, char *s2)
 
 	a = b;
 	while (*s1)
-	{
 		*a++ = *s1++;
-	}
 	while (*s2)
-	{
 		*a++ = *s2++;
-	}
 	*a = 0;
+
 	return (b);
 }
