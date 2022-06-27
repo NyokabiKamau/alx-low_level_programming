@@ -20,24 +20,20 @@ char *str_concat(char *s1, char *s2)
 	str2 = 0;
 
 	a = s1;
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	else
+	if (s1)
 	{
 		while (*a++)
 			str1++;
 	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
 	else
+		s1 = "";
+	if (s2)
 	{
 		while (*a++)
 			str2++;
 	}
+	else
+		s2 = "";
 
 	b = malloc(str1 + str2 + 1);
 	if (!b)
