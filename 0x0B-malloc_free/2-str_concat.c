@@ -17,6 +17,8 @@ char *str_concat(char *s1, char *s2)
 	char *a, *b;
 
 	str1 = 0;
+	str2 = 0;
+
 	a = s1;
 	if (s1 == NULL)
 	{
@@ -27,7 +29,6 @@ char *str_concat(char *s1, char *s2)
 		while (*a++)
 			str1++;
 	}
-	str2 = 0;
 	if (s2 == NULL)
 	{
 		s2 = "";
