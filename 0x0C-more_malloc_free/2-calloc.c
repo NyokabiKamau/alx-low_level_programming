@@ -18,8 +18,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	c = malloc(size * nmemb);
 
+	c = malloc(size * nmemb);
 	if (c == NULL)
 		return (NULL);
 	for (i = 0; i < nmemb; i++)
