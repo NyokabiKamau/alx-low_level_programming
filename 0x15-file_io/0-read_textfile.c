@@ -28,9 +28,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	x = read(fd, buf, letters);
-	y = write(1, buf, x);
+	if (x < 0)
+	{
+		free(buf);
+		return (0);
+	}
+	buf[x] = '\0';
 
-	close (fd);
+	close(fd);
+
+	y = write(1, buf, x);
+	if (y < 0)
+	{
+		free(buf);
+		return (0);
+	}
 
 	free(buf);
 	return (y);
