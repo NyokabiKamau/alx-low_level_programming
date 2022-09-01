@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * dlistint_len - function that deletes the node at index of a doubly linked list
+ * dlistint_len - deletes the node at index of a doubly linked list
  * @h: pointer to the list
  *
  * Return: number of nodes
